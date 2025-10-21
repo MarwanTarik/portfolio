@@ -2,6 +2,7 @@ import { TanStackDevtools } from '@tanstack/react-devtools'
 import {createRootRoute,  Outlet  } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { Header } from '@/components/Header'
+import { Contact } from '@/components/Contact'
 
 export const Route = createRootRoute({
   component: () => (
@@ -19,6 +20,7 @@ export const Route = createRootRoute({
           },
         ]}
       />
+      <Contact />
     </>
   ),
 })
