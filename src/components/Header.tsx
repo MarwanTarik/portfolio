@@ -5,7 +5,6 @@ export function Header() {
     const navigations = [
         { to: '/home',  name: 'Home' },
         { to: '/about', name: 'About' },
-        { to:'/tech-stack', name: 'Teck Stack' },
         { to: '/projects', name: 'Projects' },
         { to: '/blogs', name: 'Blogs' },
         { to: '/contact', name: 'Contact' }
