@@ -1,4 +1,4 @@
-import { Blog } from "@/components/Blog";
+import { BlogCard } from "@/components/BlogCard";
 import { getBlogList } from "@/lib/utils";
 import { createFileRoute } from "@tanstack/react-router";
 
@@ -20,20 +20,16 @@ function Blogs() {
 				</p>
 			</div>
 
-			<div className="w-full flex flex-col gap-8">
-				{blogs.map((blog, index) => (
-					<div
-						key={blog.title}
-						className="animate-fade-in"
-						style={{ animationDelay: `${index * 100}ms` }}
-					>
-						<Blog
-							content={blog.content}
-							title={blog.title}
-							date={blog.date}
-							thumbnail={blog.thumbnail}
-						/>
-					</div>
+			<div className="w-full flex gap-6 flex-wrap">
+				{blogs.map((blog) => (
+					<BlogCard
+						key={blog.id}
+						id={1}
+						description={blog.description}
+						title={blog.title}
+						date={blog.date}
+						thumbnail={blog.thumbnail}
+					/>
 				))}
 			</div>
 
