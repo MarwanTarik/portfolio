@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 
 export function Header() {
 	const navigations = [
-		{ to: "/home", name: "Home" },
+		{ to: "/", name: "Home" },
 		{ to: "/about", name: "About" },
 		{ to: "/projects", name: "Projects" },
 		{ to: "/blogs", name: "Blogs" },
