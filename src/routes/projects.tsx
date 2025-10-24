@@ -20,7 +20,7 @@ function Projects() {
 				</p>
 			</div>
 
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 w-full">
 				{projects.map((project, index) => (
 					<div
 						key={project.title}
