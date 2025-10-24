@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
-import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 
 export const Route = createRootRoute({
 	component: () => (
@@ -22,7 +22,7 @@ export const Route = createRootRoute({
 					},
 				]}
 			/>
-			<Contact />
+			<Footer />
 		</div>
 	),
 });
