@@ -1,8 +1,9 @@
 import { Calendar, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
+import { useNavigate } from "@tanstack/react-router";
 
 export type BlogCardProp = {
-	id: number
+	id: string;
 	description: string;
 	title: string;
 	date: string;
@@ -11,6 +12,8 @@ export type BlogCardProp = {
 };
 
 export function BlogCard({ id, description, title, date, thumbnail }: BlogCardProp) {
+	const navigate = useNavigate();
+
 	return (
 		<Card 
 			className="blog-post bg-secondary/50 group w-full max-w-sm overflow-hidden transition-all duration-300 
@@ -54,9 +57,16 @@ export function BlogCard({ id, description, title, date, thumbnail }: BlogCardPr
 			<CardFooter className="px-4 pb-4 pt-0">
 				<button 
 					type="button"
-					className="flex items-center gap-2 text-sm font-medium text-primary hover:gap-3 transition-all duration-200 group/btn"
+					className="flex items-center gap-2 text-sm font-medium text-primary hover:gap-3 
+					transition-all duration-200 group/btn"
+					onClick={() => 
+						navigate({
+							to: '/blogs/$blogId',
+							params: { blogId: id }
+						})
+					}
 				>
-					<span>Read more</span>
+					<span> Read more </span>
 					<ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
 				</button>
 			</CardFooter>

@@ -2,7 +2,7 @@ import { BlogCard } from "@/components/BlogCard";
 import { getBlogList } from "@/lib/utils";
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/blogs")({
+export const Route = createFileRoute("/blogs/")({
 	component: Blogs,
 });
 
@@ -24,7 +24,7 @@ function Blogs() {
 				{blogs.map((blog) => (
 					<BlogCard
 						key={blog.id}
-						id={1}
+						id={blog.id}
 						description={blog.description}
 						title={blog.title}
 						date={blog.date}
@@ -40,5 +40,5 @@ function Blogs() {
 				</div>
 			)}
 		</div>
-	);
+	)
 }
