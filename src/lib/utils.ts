@@ -101,6 +101,6 @@ export function getBlogList(): BlogCardProp[] {
 		date: blog.date,
 		thumbnail: blog.thumbnail,
 	}));
-	
+
 	return blogs;
 }

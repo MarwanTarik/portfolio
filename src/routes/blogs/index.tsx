@@ -40,5 +40,5 @@ function Blogs() {
 				</div>
 			)}
 		</div>
-	)
+	);
 }

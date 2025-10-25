@@ -18,7 +18,7 @@ function Home() {
 			<HomeSummaryComponnent />
 			<HomeProjectsComponennent />
 		</div>
-	)
+	);
 }
 
 function HomeIntroComponnent() {
@@ -54,7 +54,7 @@ function HomeIntroComponnent() {
 				</a>
 			</div>
 		</div>
-	)
+	);
 }
 
 function HomeSummaryComponnent() {
@@ -77,7 +77,7 @@ function HomeSummaryComponnent() {
 				More...
 			</button>
 		</div>
-	)
+	);
 }
 
 function HomeProjectsComponennent() {
@@ -105,5 +105,5 @@ function HomeProjectsComponennent() {
 				))}
 			</div>
 		</div>
-	)
+	);
 }
