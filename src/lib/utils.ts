@@ -17,16 +17,30 @@ export function getGithubUrl(): string {
 	return "https://github.com/MarwanTarik";
 }
 
+export function getEmail(): string {
+	return "marwantarik64@gmail.com";
+}
+
 export function getHomeSummary(): string {
 	return `
-    A Software Engineer experienced in Web Development and Cloud Computing: 2x AWS Certified
+	Software Engineer with hands-on experience in Full-Stack Web Development and Cloud Computing,
+	and strong interests in Systems Engineering and DevOps.
+	Holding 2× AWS Certifications,
+	with a solid foundation in computer science and a focus on building scalable, 
+	efficient applications. Passionate about continuous learning, 
+	emerging technologies, and solving complex technical challenges to deliver impactful, high-quality solutions.
   `;
 }
 
 export function getSummary(): string {
-	const summary = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-    Quibusdam beatae quae molestias libero ut corrupti odit expedita fugit voluptates facere. 
-    Nam voluptatibus ex quis itaque ratione, repellendus veritatis fuga molestias!`;
+	const summary = `
+	Software Engineer with hands-on experience in Full-Stack Web Development and Cloud Computing,
+	and strong interests in Systems Engineering and DevOps.
+	Holding 2× AWS Certifications,
+	with a solid foundation in computer science and a focus on building scalable, 
+	efficient applications. Passionate about continuous learning, 
+	emerging technologies, and solving complex technical challenges to deliver impactful, high-quality solutions.
+	`;
 
 	return summary;
 }
@@ -45,14 +59,28 @@ export function getSkills(): string[] {
 		"Next.js",
 		"AWS",
 		"MongoDB",
+		"PostgreSQL",
+		"C#",
+		"ASP.NET Core",
+		"Entity Framework",
+		"Azure",
+		"Linux",
+		"Jest",
+		"xUnit",
+		"Gunit",
+		"RESTful APIs",
+		"HTML",
+		"CSS",
+		"Chakra UI",
+		"Terraform",
+		"GitHub Actions",
 	];
 
 	return skills;
 }
 
 export function getResumeUrl(): string {
-	const resumeUrl = "/Marwan_Tarik_Resume.pdf";
-	return resumeUrl;
+	return "https://drive.google.com/file/d/1gQYyqbwBe_at2yNMX4NrVfjQg-YnqAdG/view?usp=drive_link";
 }
 
 export function getProjectList(): projectProps[] {
@@ -60,32 +88,47 @@ export function getProjectList(): projectProps[] {
 
 	const projects: projectProps[] = [
 		{
-			title: "E-Commerce Platform",
-			description:
-				"A full-stack e-commerce application with payment integration and real-time inventory management",
-			tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
-			github: github,
-			live: "https://ecommerce-demo.example.com",
-			jobTitle: "Full-Stack",
+			title: "Bustub",
+			description: "A Relational Database Management System",
+			tags: ["C++", "Database", "Systems", "CMake", "SQL"],
+			live: undefined,
+			github: `${github}/bustub`,
+			jobTitle: "Systems Project",
 		},
 		{
-			title: "Task Management System",
+			title: "Skillbridge",
 			description:
-				"Collaborative task management tool with real-time updates and team workflows",
-			tags: ["TypeScript", "Express", "MongoDB", "Socket.io"],
-			github: github,
-			live: "https://tasks.example.com",
-			jobTitle: "Backend",
+				"A platform connecting learners with industry experts for skill development.",
+			tags: ["ASP.NET Core", "React", "TypeScript", "Azure", "Chakra UI", "MSSQL", 
+				"GitHub Actions", "Docker", "FFmpeg", "NLP"],
+			live: undefined,
+			github: `${github}/SkillBridge-GraduationProject/skillBridge`,
+			jobTitle: "Full-Stack Developer",
 		},
 		{
-			title: "Weather Dashboard",
-			description:
-				"Interactive weather dashboard with forecasts and historical data visualization",
-			tags: ["React", "TailwindCSS", "OpenWeather API"],
-			github: github,
-			live: "https://weather.example.com",
-			jobTitle: "Frontend",
+			title: "Eshtarek",
+			description: "A subscription Management Platform",
+			tags: ["Django REST Framework", "PostgreSQL", "Docker", "JWT", "RLS", "Swagger"],
+			live: undefined,
+			github: `${github}/eshtarek`,
+			jobTitle: "Backend Developer",
 		},
+		{
+			title: "Courses Hub",
+			description: "Courses Registration Management System",
+			tags: ["Node.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma", "Jest", "JWT", "Docker"],
+			live: undefined,
+			github: `${github}/courses-hub`,
+			jobTitle: "Backend Developer",
+		},
+		{
+			title: "HyperMart",
+			description: "A Restful API designed to manage an E-commerce Applications",
+			tags: ["TypeScript", "Node.js", "Express", "PostgresSQL", "Jest", "Sqlize"],
+			live: undefined,
+			github: `${github}/HyperMart`,
+			jobTitle: "Backend Developer",
+		}
 	];
 
 	return projects;

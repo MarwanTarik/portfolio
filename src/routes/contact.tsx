@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail, Github, Linkedin, Send, MapPin } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 import { useId } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { getEmail, getGithubUrl, getLinkedinUrl } from "@/lib/utils";
 
 export const Route = createFileRoute("/contact")({
 	component: RouteComponent,
@@ -19,91 +20,18 @@ function RouteComponent() {
 				</p>
 			</div>
 
-			<div className="grid md:grid-cols-2 gap-8 w-full">
-				<ContactForm />
-
-				<div className="space-y-6">
-					<ContactInfo />
-					<ContactLinks />
-				</div>
+			<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
+				<ContactInfo />
+				<ContactLinks />
 			</div>
 		</div>
 	);
 }
 
-function ContactForm() {
-	const nameId = useId();
-	const emailId = useId();
-	const subjectId = useId();
-	const messageId = useId();
-
-	return (
-		<Card className="border border-border/50 bg-secondary/50 shadow-xl hover:shadow-2xl transition-all duration-300">
-			<CardContent className="p-8">
-				<h2 className="text-2xl font-bold mb-6 text-primary">Send a Message</h2>
-
-				<form className="space-y-5">
-					<div className="space-y-2">
-						<label htmlFor={nameId} className="text-sm font-medium">
-							Name
-						</label>
-						<input
-							id={nameId}
-							type="text"
-							placeholder="Your name"
-							className="w-full px-4 py-3 rounded-lg border border-border bg-secondary*2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-						/>
-					</div>
-
-					<div className="space-y-2">
-						<label htmlFor={emailId} className="text-sm font-medium">
-							Email
-						</label>
-						<input
-							id={emailId}
-							type="email"
-							placeholder="your.email@example.com"
-							className="w-full px-4 py-3 rounded-lg border border-border bg-secondary*2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-						/>
-					</div>
-
-					<div className="space-y-2">
-						<label htmlFor={subjectId} className="text-sm font-medium">
-							Subject
-						</label>
-						<input
-							id={subjectId}
-							type="text"
-							placeholder="What's this about?"
-							className="w-full px-4 py-3 rounded-lg border border-border bg-secondary*2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-						/>
-					</div>
-
-					<div className="space-y-2">
-						<label htmlFor={messageId} className="text-sm font-medium">
-							Message
-						</label>
-						<textarea
-							id={messageId}
-							rows={5}
-							placeholder="Tell me about your project or question..."
-							className="w-full px-4 py-3 rounded-lg border border-border bg-secondary*2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
-						/>
-					</div>
-
-					<button
-						type="submit"
-						className="w-full bg-primary text-primary-foreground font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition-all duration-300 flex items-center justify-center gap-2 hover:gap-3 shadow-lg hover:shadow-xl"
-					>
-						<span>Send Message</span>
-						<Send className="w-4 h-4" />
-					</button>
-				</form>
-			</CardContent>
-		</Card>
-	);
-}
 function ContactLinks() {
+	const github = getGithubUrl();
+	const linkedin = getLinkedinUrl();
+
 	return (
 		<Card className="border border-border/50 bg-secondary/50 shadow-xl hover:shadow-2xl transition-all duration-300">
 			<CardContent className="p-8">
@@ -113,7 +41,7 @@ function ContactLinks() {
 
 				<div className="space-y-4">
 					<a
-						href="https://linkedin.com/in/yourprofile"
+						href={linkedin}
 						target="_blank"
 						rel="noopener noreferrer"
 						className="flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary hover:bg-primary/5 transition-all group"
@@ -130,7 +58,7 @@ function ContactLinks() {
 					</a>
 
 					<a
-						href="https://github.com/yourprofile"
+						href={github}
 						target="_blank"
 						rel="noopener noreferrer"
 						className="flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary hover:bg-primary/5 transition-all group"

@@ -31,15 +31,12 @@ function About() {
 					</p>
 				</div>
 
-				<button
+				<a
 					className="group relative overflow-hidden border-2 border-primary bg-primary 
                     text-primary-foreground font-semibold hover:bg-transparent hover:text-primary 
                     transition-all duration-300 px-6 py-3 rounded-xl shadow-lg hover:shadow-xl
                     hover:scale-105 active:scale-95 flex items-center gap-2"
-					type="button"
-					onClick={() => {
-						console.log("Downloading resume...");
-					}}
+					href={resumeUrl}
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +55,7 @@ function About() {
 						/>
 					</svg>
 					Download Resume
-				</button>
+				</a>
 			</div>
 
 			<div
