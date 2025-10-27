@@ -1,9 +1,10 @@
-import { getGithubUrl, getLinkedinUrl } from "@/lib/utils";
+import { getEmail, getGithubUrl, getLinkedinUrl } from "@/lib/utils";
 import { Instagram, Youtube, Linkedin, Github, Send } from "lucide-react";
 
 export function Footer() {
 	const linkedinUrl = getLinkedinUrl();
 	const githubUrl = getGithubUrl();
+	const email = getEmail();
 
 	return (
 		<div className="w-full py-8 px-8 bg-primary text-black">
@@ -43,15 +44,15 @@ export function Footer() {
 						</div>
 					</div>
 
-					<button
-						type="button"
+					<a
+						href={`mailto:${email}`}
 						className="bg-transparent border-2 border-black
-             text-black px-6 py-3 rounded-full text-base font-bold 
-             hover:bg-black hover:text-primary transition-all duration-300 flex  gap-2"
+							text-black px-6 py-3 rounded-full text-base font-bold 
+							hover:bg-black hover:text-primary transition-all duration-300 flex gap-2"
 					>
 						Contact Me
 						<Send className="w-5 h-5" />
-					</button>
+					</a>
 				</div>
 			</div>
 		</div>
