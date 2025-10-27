@@ -75,9 +75,11 @@ function HomeSummaryComponnent() {
 				type="button"
 				className="bg-primary text-primary-foreground px-8 py-2.5 rounded-lg text-base
 				 font-semibold hover:opacity-90 transition-opacity self-end"
-				onClick={() => navigate({
-					to: '/about'
-				})}
+				onClick={() =>
+					navigate({
+						to: "/about",
+					})
+				}
 			>
 				More...
 			</button>

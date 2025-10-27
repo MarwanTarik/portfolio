@@ -99,8 +99,18 @@ export function getProjectList(): projectProps[] {
 			title: "Skillbridge",
 			description:
 				"A platform connecting learners with industry experts for skill development.",
-			tags: ["ASP.NET Core", "React", "TypeScript", "Azure", "Chakra UI", "MSSQL", 
-				"GitHub Actions", "Docker", "FFmpeg", "NLP"],
+			tags: [
+				"ASP.NET Core",
+				"React",
+				"TypeScript",
+				"Azure",
+				"Chakra UI",
+				"MSSQL",
+				"GitHub Actions",
+				"Docker",
+				"FFmpeg",
+				"NLP",
+			],
 			live: undefined,
 			github: `${github}/SkillBridge-GraduationProject/skillBridge`,
 			jobTitle: "Full-Stack Developer",
@@ -108,7 +118,14 @@ export function getProjectList(): projectProps[] {
 		{
 			title: "Eshtarek",
 			description: "A subscription Management Platform",
-			tags: ["Django REST Framework", "PostgreSQL", "Docker", "JWT", "RLS", "Swagger"],
+			tags: [
+				"Django REST Framework",
+				"PostgreSQL",
+				"Docker",
+				"JWT",
+				"RLS",
+				"Swagger",
+			],
 			live: undefined,
 			github: `${github}/eshtarek`,
 			jobTitle: "Backend Developer",
@@ -116,19 +133,36 @@ export function getProjectList(): projectProps[] {
 		{
 			title: "Courses Hub",
 			description: "Courses Registration Management System",
-			tags: ["Node.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma", "Jest", "JWT", "Docker"],
+			tags: [
+				"Node.js",
+				"NestJS",
+				"TypeScript",
+				"PostgreSQL",
+				"Prisma",
+				"Jest",
+				"JWT",
+				"Docker",
+			],
 			live: undefined,
 			github: `${github}/courses-hub`,
 			jobTitle: "Backend Developer",
 		},
 		{
 			title: "HyperMart",
-			description: "A Restful API designed to manage an E-commerce Applications",
-			tags: ["TypeScript", "Node.js", "Express", "PostgresSQL", "Jest", "Sqlize"],
+			description:
+				"A Restful API designed to manage an E-commerce Applications",
+			tags: [
+				"TypeScript",
+				"Node.js",
+				"Express",
+				"PostgresSQL",
+				"Jest",
+				"Sqlize",
+			],
 			live: undefined,
 			github: `${github}/HyperMart`,
 			jobTitle: "Backend Developer",
-		}
+		},
 	];
 
 	return projects;

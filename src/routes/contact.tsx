@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail, Github, Linkedin, Send, MapPin } from "lucide-react";
-import { useId } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { getEmail, getGithubUrl, getLinkedinUrl } from "@/lib/utils";
+import { getGithubUrl, getLinkedinUrl } from "@/lib/utils";
 
 export const Route = createFileRoute("/contact")({
 	component: RouteComponent,

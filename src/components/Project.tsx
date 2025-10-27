@@ -66,22 +66,20 @@ export function Project({
 					</a>
 				</Button>
 
-				{
-					live && (
-						<Button
-							variant="outline"
-							size="sm"
-							className="flex-1 border-primary/30 hover:bg-primary/20 hover:border-primary 
+				{live && (
+					<Button
+						variant="outline"
+						size="sm"
+						className="flex-1 border-primary/30 hover:bg-primary/20 hover:border-primary 
 							hover:scale-105 transition-all duration-300 group/btn"
-							asChild
-						>
-							<a href={live} target="_blank" rel="noopener noreferrer">
-								<ExternalLink className="mr-2 h-4 w-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-								Live
-							</a>
-						</Button>
-					)
-				}
+						asChild
+					>
+						<a href={live} target="_blank" rel="noopener noreferrer">
+							<ExternalLink className="mr-2 h-4 w-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+							Live
+						</a>
+					</Button>
+				)}
 			</div>
 		</Card>
 	);
