@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { Project } from "@/components/Project";
 import {
 	getGithubUrl,
@@ -59,6 +59,7 @@ function HomeIntroComponnent() {
 
 function HomeSummaryComponnent() {
 	const summary = getHomeSummary();
+	const navigate = useNavigate();
 
 	return (
 		<div className="home-summary rounded-2xl w-full py-12 px-8 bg-secondary text-secondary-foreground flex flex-col">
@@ -72,7 +73,11 @@ function HomeSummaryComponnent() {
 
 			<button
 				type="button"
-				className="bg-primary text-primary-foreground px-8 py-2.5 rounded-lg text-base font-semibold hover:opacity-90 transition-opacity self-end"
+				className="bg-primary text-primary-foreground px-8 py-2.5 rounded-lg text-base
+				 font-semibold hover:opacity-90 transition-opacity self-end"
+				onClick={() => navigate({
+					to: '/about'
+				})}
 			>
 				More...
 			</button>
@@ -91,7 +96,7 @@ function HomeProjectsComponennent() {
 				</p>
 			</div>
 
-			<div className="flex gap-6">
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
 				{projects.map((project) => (
 					<Project
 						key={project.title}

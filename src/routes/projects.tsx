@@ -1,6 +1,6 @@
+import { createFileRoute } from "@tanstack/react-router";
 import { Project } from "@/components/Project";
 import { getProjectList } from "@/lib/utils";
-import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/projects")({
 	component: Projects,
@@ -20,22 +20,17 @@ function Projects() {
 				</p>
 			</div>
 
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 w-full">
-				{projects.map((project, index) => (
-					<div
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+				{projects.map((project) => (
+					<Project
 						key={project.title}
-						className="animate-fade-in"
-						style={{ animationDelay: `${index * 100}ms` }}
-					>
-						<Project
-							title={project.title}
-							description={project.description}
-							tags={project.tags}
-							github={project.github}
-							live={project.live}
-							jobTitle={project.jobTitle}
-						/>
-					</div>
+						title={project.title}
+						description={project.description}
+						tags={project.tags}
+						github={project.github}
+						live={project.live}
+						jobTitle={project.jobTitle}
+					/>
 				))}
 			</div>
 

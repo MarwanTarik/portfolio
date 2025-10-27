@@ -1,13 +1,13 @@
+import { ExternalLink, Github } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
-import { Github, ExternalLink } from "lucide-react";
 
 export type projectProps = {
 	title: string;
 	jobTitle: string;
 	description: string;
 	tags: string[];
-	live: string;
+	live?: string;
 	github: string;
 };
 
@@ -22,7 +22,7 @@ export function Project({
 		<Card
 			className="p-6 bg-secondary/50 backdrop-blur-sm border-primary/10 
             hover:border-primary/50 transition-all duration-300 hover:shadow-2xl 
-            hover:shadow-primary/10 group hover:-translate-y-2 flex flex-col w-100 h-80"
+            hover:shadow-primary/10 group hover:-translate-y-2 flex flex-col w-full h-full min-h-[320px]"
 		>
 			<div className="mb-4 flex-grow">
 				<div className="flex items-start justify-between mb-3">
@@ -66,18 +66,22 @@ export function Project({
 					</a>
 				</Button>
 
-				<Button
-					variant="outline"
-					size="sm"
-					className="flex-1 border-primary/30 hover:bg-primary/20 hover:border-primary 
-					hover:scale-105 transition-all duration-300 group/btn"
-					asChild
-				>
-					<a href={live} target="_blank" rel="noopener noreferrer">
-						<ExternalLink className="mr-2 h-4 w-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-						Live
-					</a>
-				</Button>
+				{
+					live && (
+						<Button
+							variant="outline"
+							size="sm"
+							className="flex-1 border-primary/30 hover:bg-primary/20 hover:border-primary 
+							hover:scale-105 transition-all duration-300 group/btn"
+							asChild
+						>
+							<a href={live} target="_blank" rel="noopener noreferrer">
+								<ExternalLink className="mr-2 h-4 w-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+								Live
+							</a>
+						</Button>
+					)
+				}
 			</div>
 		</Card>
 	);
