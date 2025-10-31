@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, Github, Linkedin, Send, MapPin } from "lucide-react";
+import { Mail, Github, Linkedin, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { getGithubUrl, getLinkedinUrl } from "@/lib/utils";
 

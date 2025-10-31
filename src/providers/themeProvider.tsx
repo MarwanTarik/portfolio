@@ -1,6 +1,6 @@
 import { type ReactNode, useEffect, useState } from "react";
 import { ThemeContext } from "@/context/themeContext";
-import { getThemeFromCookie, saveThemeToCookie } from "@/lib/themeManager";
+import { getThemeFromCookie } from "@/lib/themeManager";
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
 	const [theme, setTheme] = useState<"light" | "dark">(

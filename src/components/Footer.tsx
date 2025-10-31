@@ -1,5 +1,5 @@
 import { getEmail, getGithubUrl, getLinkedinUrl } from "@/lib/utils";
-import { Instagram, Youtube, Linkedin, Github, Send } from "lucide-react";
+import { Linkedin, Github, Send } from "lucide-react";
 
 export function Footer() {
 	const linkedinUrl = getLinkedinUrl();

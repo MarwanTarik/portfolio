@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Moon, MoonIcon, SunIcon } from "lucide-react";
+import { MoonIcon, SunIcon } from "lucide-react";
 import { useContext } from "react";
 import { ThemeContext } from "@/context/themeContext";
 import { Toggle } from "./ui/toggle";
