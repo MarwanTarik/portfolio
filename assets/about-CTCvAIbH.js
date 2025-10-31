@@ -1,0 +1,12 @@
+import{j as e,d as s,e as t,f as n}from"./index-ibv_wY_R.js";function i(){const a=s(),l=n(),o=t();return e.jsxs("div",{className:"flex flex-col justify-center items-center gap-8 font-mono mx-auto max-w-7xl px-8 py-16",children:[e.jsx("div",{className:"w-full h-fit p-8 rounded-2xl bg-gradient-to-r from-secondary to-secondary/80 shadow-lg",children:e.jsx("p",{className:"font-extrabold font-mono text-4xl text-secondary-foreground text-center tracking-tight",children:"About Me"})}),e.jsxs("div",{className:`flex flex-col bg-secondary/50 backdrop-blur-sm justify-center 
+            items-start font-mono gap-8 w-full h-full p-8 rounded-2xl border border-primary/10 
+            shadow-xl hover:shadow-2xl transition-all duration-300`,children:[e.jsxs("div",{className:"space-y-4",children:[e.jsx("h2",{className:"text-2xl font-bold text-primary",children:"Summary"}),e.jsx("p",{className:"text-lg font-normal leading-relaxed text-foreground/90",children:a})]}),e.jsxs("a",{className:`group relative overflow-hidden border-2 border-primary bg-primary 
+                    text-primary-foreground font-semibold hover:bg-transparent hover:text-primary 
+                    transition-all duration-300 px-6 py-3 rounded-xl shadow-lg hover:shadow-xl
+                    hover:scale-105 active:scale-95 flex items-center gap-2`,href:o,children:[e.jsxs("svg",{xmlns:"http://www.w3.org/2000/svg",className:"h-5 w-5",viewBox:"0 0 20 20",fill:"currentColor","aria-hidden":"true",children:[e.jsx("title",{children:"Download icon"}),e.jsx("path",{fillRule:"evenodd",d:`M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1
+                         0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 
+                         111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z`,clipRule:"evenodd"})]}),"Download Resume"]})]}),e.jsxs("div",{className:`w-full flex flex-col gap-6 bg-secondary/50 backdrop-blur-sm p-8 
+            rounded-2xl border border-primary/10 shadow-xl`,children:[e.jsx("h2",{className:"text-3xl font-bold text-primary text-center",children:"Skills & Technologies"}),e.jsx("div",{className:"flex flex-wrap gap-4 justify-center items-center",children:l.map(r=>e.jsx("span",{className:`px-4 py-2 bg-primary/10 hover:bg-primary/20 
+                            border border-primary/30 rounded-lg text-foreground font-medium
+                            transition-all duration-300 hover:scale-110 hover:shadow-lg
+                            cursor-default`,children:r},r))})]})]})}export{i as component};
