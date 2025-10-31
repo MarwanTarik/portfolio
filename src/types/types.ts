@@ -15,3 +15,8 @@ export type Blog = {
 	thumbnail?: string;
 	content: string;
 };
+
+export type ThemeContextType = {
+	theme: 'light' | 'dark';
+	setTheme: (theme: 'light' | 'dark') => void;
+};
