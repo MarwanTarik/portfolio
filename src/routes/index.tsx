@@ -6,6 +6,7 @@ import {
 	getLinkedinUrl,
 	getProjectList,
 } from "@/lib/utils";
+import { Github, Linkedin } from "lucide-react";
 
 export const Route = createFileRoute("/")({
 	component: Home,
@@ -38,19 +39,11 @@ function HomeIntroComponnent() {
 
 			<div className="flex gap-6 mt-2">
 				<a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
-					<img
-						src="../../public/linkedin-svgrepo-com.svg"
-						alt="linkedin"
-						className="w-6 hover:opacity-80 transition-opacity cursor-pointer"
-					/>
+					<Linkedin className="w-7 h-7 text-primary" />
 				</a>
 
 				<a href={githubUrl} target="_blank" rel="noopener noreferrer">
-					<img
-						src="../../public/github-brands-solid-full.svg"
-						alt="github"
-						className="w-6 hover:opacity-80 transition-opacity cursor-pointer"
-					/>
+					<Github className="w-7 h-7 text-primary" />
 				</a>
 			</div>
 		</div>
