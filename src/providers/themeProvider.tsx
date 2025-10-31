@@ -3,17 +3,19 @@ import { ThemeContext } from "@/context/themeContext";
 import { getThemeFromCookie, saveThemeToCookie } from "@/lib/themeManager";
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-    const [theme, setTheme] = useState<'light' | 'dark'>(getThemeFromCookie() ?? 'light');
-    
-    useEffect(() => {
-        const prevTheme = theme === 'light' ? 'dark' : 'light';
-        document.documentElement.classList.remove(prevTheme);
-        document.documentElement.classList.add(theme);
-    }, [theme]);
+	const [theme, setTheme] = useState<"light" | "dark">(
+		getThemeFromCookie() ?? "light",
+	);
 
-    return (
-        <ThemeContext.Provider value={{ theme, setTheme }}>
-            {children}
-        </ThemeContext.Provider>
-    );
+	useEffect(() => {
+		const prevTheme = theme === "light" ? "dark" : "light";
+		document.documentElement.classList.remove(prevTheme);
+		document.documentElement.classList.add(theme);
+	}, [theme]);
+
+	return (
+		<ThemeContext.Provider value={{ theme, setTheme }}>
+			{children}
+		</ThemeContext.Provider>
+	);
 }

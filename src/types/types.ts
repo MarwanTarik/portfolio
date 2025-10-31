@@ -17,6 +17,6 @@ export type Blog = {
 };
 
 export type ThemeContextType = {
-	theme: 'light' | 'dark';
-	setTheme: (theme: 'light' | 'dark') => void;
+	theme: "light" | "dark";
+	setTheme: (theme: "light" | "dark") => void;
 };

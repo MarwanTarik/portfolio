@@ -34,9 +34,9 @@ export function Header() {
 				variant="default"
 				className="!hover:bg-transparent !bg-transparent"
 				onClick={() => {
-					const newTheme = theme === 'light' ? 'dark' : 'light';
-					setTheme(newTheme)
-					saveThemeToCookie(newTheme)
+					const newTheme = theme === "light" ? "dark" : "light";
+					setTheme(newTheme);
+					saveThemeToCookie(newTheme);
 				}}
 			>
 				{theme === "light" ? <MoonIcon /> : <SunIcon />}
