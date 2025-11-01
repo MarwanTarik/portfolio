@@ -37,10 +37,10 @@ pre code.hljs {
 	--popover: oklch(1 0 0);
 	--popover-foreground: oklch(0.15 0.01 280);
 
-	--primary: oklch(0.75 0.15 90);
+	--primary: oklch(75.169% 0.15026 90.264);
 	--primary-foreground: oklch(0.15 0.01 280);
 
-	--secondary: oklch(0.96 0.002 280);
+	--secondary: oklch(93.016% 0.00391 106.893);
 	--secondary-foreground: oklch(0.2 0.008 280);
 	--muted: oklch(0.92 0.002 280);
 	--muted-foreground: oklch(0.55 0.02 280);
