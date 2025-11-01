@@ -14,8 +14,7 @@
     <title>portfolio</title>
     
     <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // Restore the redirected path from 404.html
+
       (function (l) {
         if (l.search) {
           var q = {};
@@ -27,14 +26,11 @@
             var basePath = '/portfolio';
             // Decode the path (convert %2F back to /)
             var decodedPath = q.p.replace(/%2F/g, '/');
-            window.history.replaceState(
-              null,
-              null,
-              basePath +
-                decodedPath +
-                (q.q ? ('?' + q.q) : '') +
-                l.hash
-            );
+            var newUrl = basePath + decodedPath + (q.q ? ('?' + q.q) : '') + l.hash;
+            
+            // Use window.location.replace to navigate without creating history entry
+            // This ensures modules load from the correct path
+            window.location.replace(newUrl);
           }
         }
       })(window.location);
