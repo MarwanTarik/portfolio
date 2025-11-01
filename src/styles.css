@@ -20,7 +20,6 @@ code {
 		source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-/* Custom styles for blog code blocks */
 .hljs {
 	@apply !bg-transparent;
 }
@@ -31,15 +30,13 @@ pre code.hljs {
 :root {
 	--radius: 0.65rem;
 
-	/* Light theme - softer, more professional */
-	--background: oklch(0.98 0.001 70);
+	--background: oklch(90.155% 0.00741 80.584 / 0.57);
 	--foreground: oklch(0.15 0.01 280);
 	--card: oklch(1 0 0);
 	--card-foreground: oklch(0.15 0.01 280);
 	--popover: oklch(1 0 0);
 	--popover-foreground: oklch(0.15 0.01 280);
 
-	/* Yellow/Gold primary - more muted for light theme */
 	--primary: oklch(0.75 0.15 90);
 	--primary-foreground: oklch(0.15 0.01 280);
 
@@ -55,14 +52,12 @@ pre code.hljs {
 	--input: oklch(0.95 0.003 280);
 	--ring: oklch(0.75 0.15 90);
 
-	/* Charts - yellow gradient */
 	--chart-1: oklch(0.82 0.18 95);
 	--chart-2: oklch(0.75 0.15 90);
 	--chart-3: oklch(0.68 0.14 85);
 	--chart-4: oklch(0.6 0.12 80);
 	--chart-5: oklch(0.52 0.1 75);
 
-	/* Sidebar */
 	--sidebar: oklch(0.98 0.001 70);
 	--sidebar-foreground: oklch(0.15 0.01 280);
 	--sidebar-primary: oklch(0.75 0.15 90);
@@ -81,7 +76,6 @@ pre code.hljs {
 	--popover: oklch(0.18 0.01 280);
 	--popover-foreground: oklch(0.98 0.001 70);
 
-	/* Vibrant yellow for dark theme */
 	--primary: oklch(0.82 0.18 95);
 	--primary-foreground: oklch(0.12 0.008 280);
 
@@ -97,14 +91,12 @@ pre code.hljs {
 	--input: oklch(1 0 0 / 18%);
 	--ring: oklch(0.82 0.18 95);
 
-	/* Charts - same yellow gradient */
 	--chart-1: oklch(0.82 0.18 95);
 	--chart-2: oklch(0.75 0.15 90);
 	--chart-3: oklch(0.68 0.14 85);
 	--chart-4: oklch(0.6 0.12 80);
 	--chart-5: oklch(0.52 0.1 75);
 
-	/* Sidebar */
 	--sidebar: oklch(0.18 0.01 280);
 	--sidebar-foreground: oklch(0.98 0.001 70);
 	--sidebar-primary: oklch(0.82 0.18 95);
@@ -166,14 +158,11 @@ pre code.hljs {
 	}
 }
 
-/* Blog Markdown Enhancements */
 @layer components {
-	/* Smooth scrolling for anchor links */
 	html {
 		scroll-behavior: smooth;
 	}
 
-	/* Code block improvements */
 	.prose pre {
 		@apply overflow-x-auto;
 		scrollbar-width: thin;
@@ -196,7 +185,6 @@ pre code.hljs {
 		@apply bg-primary/50;
 	}
 
-	/* Better table styling */
 	.prose table {
 		@apply shadow-lg rounded-lg overflow-hidden;
 	}
@@ -209,12 +197,10 @@ pre code.hljs {
 		@apply bg-secondary/30 transition-colors;
 	}
 
-	/* Image captions */
 	.prose img + em {
 		@apply block text-center text-muted-foreground text-sm mt-2 italic;
 	}
 
-	/* Better blockquote styling */
 	.prose blockquote {
 		@apply not-italic;
 	}
@@ -229,7 +215,6 @@ pre code.hljs {
 		@apply text-primary text-2xl font-bold ml-1;
 	}
 
-	/* Links with nice hover effect */
 	.prose a {
 		@apply relative transition-all duration-300;
 	}
@@ -243,7 +228,6 @@ pre code.hljs {
 		@apply w-full;
 	}
 
-	/* Task lists (checkboxes) */
 	.prose input[type="checkbox"] {
 		@apply mr-2 accent-primary cursor-pointer;
 	}
@@ -252,12 +236,10 @@ pre code.hljs {
 		@apply list-none;
 	}
 
-	/* Inline code improvements */
 	.prose :not(pre) > code {
 		@apply font-semibold;
 	}
 
-	/* Headings with anchor links */
 	.prose h2,
 	.prose h3,
 	.prose h4 {
