@@ -4,15 +4,22 @@
     <meta charset="utf-8" />
     <title>Redirecting...</title>
     <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
       (function (l) {
+        // Check if the path is a public asset (blogs .md files or .json)
         var isPublicAsset = /\.(md|json)$/i.test(l.pathname);
         
         if (isPublicAsset) {
           return;
         }
         
-        var pathSegmentsToKeep = 1;
+        // For GitHub Pages with a project repo, keep the repo name segment
+        var pathSegmentsToKeep = 1; // keeps '/portfolio'
         var path = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/');
+        
+        // Get the path after the base (e.g., '/blogs/1' from '/portfolio/blogs/1')
+        var redirectPath = l.pathname.slice(path.length);
         
         var newURL =
           l.protocol +
@@ -21,7 +28,7 @@
           (l.port ? ':' + l.port : '') +
           path +
           '/?p=' +
-          l.pathname.slice(path.length + 1).replace(/\//g, '%2F') +
+          redirectPath.replace(/&/g, '~and~').replace(/\//g, '%2F') +
           (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
           l.hash;
         l.replace(newURL);
