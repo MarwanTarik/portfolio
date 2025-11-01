@@ -4,7 +4,7 @@ import { getThemeFromCookie } from "@/lib/themeManager";
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
 	const [theme, setTheme] = useState<"light" | "dark">(
-		getThemeFromCookie() ?? "light",
+		getThemeFromCookie() ?? "dark",
 	);
 
 	useEffect(() => {
