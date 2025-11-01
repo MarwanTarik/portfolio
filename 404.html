@@ -1,7 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="refresh" content="0; url=./index.html" />
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      (function (l) {
+        var pathSegmentsToKeep = 1;
+        var path = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/');
+        var newURL =
+          l.protocol +
+          '//' +
+          l.hostname +
+          (l.port ? ':' + l.port : '') +
+          path +
+          '/?p=' +
+          l.pathname.slice(1).replace(/\//g, '%2F') +
+          (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash;
+        l.replace(newURL);
+      })(window.location);
+    </script>
   </head>
   <body></body>
 </html>
