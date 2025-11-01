@@ -3,7 +3,7 @@
         "id": "1",
         "title": "Aws Lambda",
         "description": "Learn how to build serverless applications using AWS Lambda.",
-        "file_url": "/portfolio/blogs/aws.md",
+        "file_url": "/blogs/aws.md",
         "date": "2024-05-10",
         "thumbnail": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=200&fit=crop"
     }
