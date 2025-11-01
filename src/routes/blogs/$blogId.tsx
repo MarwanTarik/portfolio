@@ -12,9 +12,20 @@ export const Route = createFileRoute("/blogs/$blogId")({
 
 function Blog() {
 	const { blogId } = Route.useParams();
-	const blogData = useBlog(blogId);
+	const { blog: blogData, isLoading, error } = useBlog(blogId);
 
-	if (blogData === undefined) {
+	if (isLoading) {
+		return (
+			<div className="container mx-auto px-4 py-8">
+				<div className="text-center">
+					<div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+					<p className="text-muted-foreground mt-4">Loading blog post...</p>
+				</div>
+			</div>
+		);
+	}
+
+	if (error || blogData === undefined) {
 		return (
 			<div className="container mx-auto px-4 py-8">
 				<div className="text-center">

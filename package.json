@@ -5,7 +5,7 @@
   "homepage": "https://marwantarik.github.io/portfolio",
   "scripts": {
     "predeploy": "pnpm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite --port 3000",
     "build": "vite build && tsc",
     "serve": "vite preview",

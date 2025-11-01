@@ -3,7 +3,7 @@ import { clsx, type ClassValue } from "clsx";
 import type { projectProps } from "@/components/Project";
 import type { BlogCardProp } from "@/components/BlogCard";
 import type { BlogIndex } from "@/types/types";
-import blogIndexData from "../../public/blogs/index.json";
+import blogIndexData from "@/data/blogs.json";
 
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
