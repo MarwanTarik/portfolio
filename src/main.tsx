@@ -27,9 +27,6 @@ declare module "@tanstack/react-router" {
 	}
 }
 
-// Apply dark mode
-document.documentElement.classList.add("dark");
-
 // Render the app
 const rootElement = document.getElementById("app");
 if (rootElement && !rootElement.innerHTML) {
