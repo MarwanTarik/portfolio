@@ -5,8 +5,15 @@
     <title>Redirecting...</title>
     <script type="text/javascript">
       (function (l) {
+        var isPublicAsset = /\.(md|json)$/i.test(l.pathname);
+        
+        if (isPublicAsset) {
+          return;
+        }
+        
         var pathSegmentsToKeep = 1;
         var path = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/');
+        
         var newURL =
           l.protocol +
           '//' +
@@ -14,7 +21,7 @@
           (l.port ? ':' + l.port : '') +
           path +
           '/?p=' +
-          l.pathname.slice(1).replace(/\//g, '%2F') +
+          l.pathname.slice(path.length + 1).replace(/\//g, '%2F') +
           (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
           l.hash;
         l.replace(newURL);
